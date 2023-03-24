@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TAO.FoodList.Service\TAO.FoodList.Service.csproj" />
     <ProjectReference Include="..\TAO.FoodList.Shared\TAO.FoodList.Shared.csproj" />
   </ItemGroup>
