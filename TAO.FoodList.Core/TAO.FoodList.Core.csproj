@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TAO.FoodList.Shared\TAO.FoodList.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
