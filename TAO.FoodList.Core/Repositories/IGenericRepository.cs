@@ -10,7 +10,7 @@ namespace TAO.FoodList.Core.Repositories
     public interface IGenericRepository<TEntity> where TEntity : class
     {
         Task<TEntity> GetByIdAsync(int id);
-        IQueryable<TEntity> GetAllAsync();
+        IQueryable<TEntity> GetAll();
         IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> expression);
         Task AddAsync(TEntity entity);
         void Remove(TEntity entity);

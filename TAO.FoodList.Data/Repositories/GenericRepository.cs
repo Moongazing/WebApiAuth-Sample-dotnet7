@@ -26,7 +26,7 @@ namespace TAO.FoodList.Data.Repositories
         {
             await _dbSet.AddAsync(entity);
         }
-        public IQueryable<TEntity> GetAllAsync()
+        public IQueryable<TEntity> GetAll()
         {
           return _dbSet.AsQueryable();
         }
