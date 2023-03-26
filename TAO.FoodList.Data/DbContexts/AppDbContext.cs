@@ -17,10 +17,11 @@ namespace TAO.FoodList.Data.DbContexts
         {
             
         }
+        #region TableProperties
         public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
         public DbSet<MainFoodMenu> MainFoodMenus { get; set; }
         public DbSet<DietFoodMenu> DietFoodMenus { get; set; }
-
+        #endregion
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
