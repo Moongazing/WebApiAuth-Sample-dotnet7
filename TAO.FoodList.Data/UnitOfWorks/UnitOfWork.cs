@@ -20,7 +20,6 @@ namespace TAO.FoodList.Data.UnitOfWorks
         {
             _context.SaveChanges();
         }
-
         public async Task CommitAsync()
         {
             await _context.SaveChangesAsync();
