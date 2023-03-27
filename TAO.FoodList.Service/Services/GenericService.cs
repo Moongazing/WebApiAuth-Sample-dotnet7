@@ -73,7 +73,6 @@ namespace TAO.FoodList.Service.Services
 
             return Response<NoDataDto>.Success(204);
         }
-
         public async Task<Response<IEnumerable<TDto>>> Where(Expression<Func<TEntity, bool>> expression)
         {
             var list = _repository.Where(expression);
