@@ -11,10 +11,10 @@ namespace TAO.FoodList.Core.Services
     public interface IGenericService<TEntity, TDto> where TEntity : class where TDto : class
     {
         Task<Response<TDto>> GetByIdAsync(int id);
-        Task<Response<IQueryable<TDto>>> GetAllAsync();
+        Task<Response<IEnumerable<TDto>>> GetAllAsync();
         Task<Response<IEnumerable<TDto>>> Where(Expression<Func<TEntity, bool>> expression);
-        Task<Response<TDto>> AddAsync(TEntity entity);
-        Task<Response<NoDataDto>> Remove(TEntity entity);
-        Task<Response<NoDataDto>> Update(TEntity entity);
+        Task<Response<TDto>> AddAsync(TDto dto);
+        Task<Response<NoDataDto>> Remove(int id);
+        Task<Response<NoDataDto>> Update(TDto dto,int id);
     }
 }
