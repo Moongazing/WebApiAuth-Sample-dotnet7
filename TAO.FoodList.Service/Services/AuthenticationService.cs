@@ -75,9 +75,16 @@ namespace TAO.FoodList.Service.Services
 
         }
 
-        public Task<Response<ClientTokenDto>> CreateTokenByClient(ClientLoginDto clientLoginDto)
+        public Response<ClientTokenDto> CreateTokenByClient(ClientLoginDto clientLoginDto)
         {
-            throw new NotImplementedException();
+            var client = _clients.SingleOrDefault(x => x.Id == clientLoginDto.ClientId && x.Secret == clientLoginDto.ClientSecret);
+            if (client == null)
+            {
+                return Response<ClientTokenDto>.Fail(404,"ClientId or ClientSecret not found.",true);
+            }
+
+            var token = _tokenService.CreateTokenByClient(client);
+            return Response<ClientTokenDto>.Success(token, 200);
         }
 
         public Task<Response<TokenDto>> CreateTokenByRefreshToken(string refreshToken)
