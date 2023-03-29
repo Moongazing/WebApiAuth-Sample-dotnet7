@@ -24,7 +24,6 @@ namespace TAO.FoodList.Service.Services
             _userManager = userManager;
             _tokenOption = options.Value;
         }
-
         private string CreateRefreshToken()
         {
             var numberByte = new Byte[32];
@@ -55,8 +54,6 @@ namespace TAO.FoodList.Service.Services
 
             return claims;
         }
-
-
         public TokenDto CreateToken(UserApp userApp)
         {
             var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
@@ -88,7 +85,6 @@ namespace TAO.FoodList.Service.Services
             };
             return tokenDto;
         }
-
         public ClientTokenDto CreateTokenByClient(Client client)
         {
             var accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOption.AccessTokenExpiration);
