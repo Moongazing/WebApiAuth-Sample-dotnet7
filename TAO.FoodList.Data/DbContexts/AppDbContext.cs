@@ -13,6 +13,7 @@ namespace TAO.FoodList.Data.DbContexts
 {
     public class AppDbContext:IdentityDbContext<UserApp,IdentityRole,string>
     {
+
         public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
         {
             
@@ -25,6 +26,7 @@ namespace TAO.FoodList.Data.DbContexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+            base.OnModelCreating(builder);
         }
     }
 }

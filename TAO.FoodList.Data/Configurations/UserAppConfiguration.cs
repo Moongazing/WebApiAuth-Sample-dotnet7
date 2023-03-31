@@ -13,6 +13,7 @@ namespace TAO.FoodList.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<UserApp> builder)
         {
+            builder.HasKey(x => x.Id);
             builder.Property(x => x.City).HasMaxLength(50);
         }
     }

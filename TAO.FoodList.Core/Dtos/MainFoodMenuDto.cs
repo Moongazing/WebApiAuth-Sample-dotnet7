@@ -20,6 +20,6 @@ namespace TAO.FoodList.Core.Dtos
         public string Dessert { get; set; }
         public int DessertCalorie { get; set; }
         public string SoftDrinks { get; set; }
-        public string SoftDrinkCalorie { get; set; }
+        public decimal SoftDrinkCalorie { get; set; }
     }
 }
